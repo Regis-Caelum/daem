@@ -11,7 +11,7 @@ type DirectoryTree interface {
 	InitializeTree(path string)
 	InsertNode(path string, dirEntry os.DirEntry)
 	GetRoot() *Node
-	PrintTree()
+	PrintTree(node *Node)
 }
 
 type Node struct {
@@ -49,10 +49,13 @@ func (t *Tree) GetRoot() *Node {
 	return t.Root
 }
 
-func (t *Tree) PrintTree() {
-	head := t.Root
-	for _, val := range head.Children {
-		fmt.Println(val.Path)
+func (t *Tree) PrintTree(node *Node) {
+	if node == nil {
+		return
+	}
+	fmt.Println(node.Path)
+	for _, val := range node.Children {
+		t.PrintTree(val)
 	}
 }
 

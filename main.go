@@ -26,5 +26,5 @@ func main() {
 		return nil
 	})
 	common.CheckErr(err)
-	directoryTree.PrintTree()
+	directoryTree.PrintTree(directoryTree.GetRoot())
 }
