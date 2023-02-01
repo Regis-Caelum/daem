@@ -3,23 +3,29 @@ package main
 import (
 	"daem/common"
 	"io/fs"
+	"log"
 	"path/filepath"
 )
 
 func main() {
-
+	path := "/home/mehmed/Desktop"
+	gitHubUrl := "https://github.com/Regis-Caelum/Backup/contents"
 	directoryTree := new(common.Tree)
-	directoryTree = directoryTree.InitializeTree("/home/mehmed/Desktop")
+	directoryTree = directoryTree.InitializeTree(path, gitHubUrl)
 
-	err := filepath.WalkDir("/home/mehmed/Desktop", func(path string, d fs.DirEntry, err error) error {
+	log.Println("Generating tree...")
+	err := filepath.WalkDir(path, func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			common.CheckErr(err)
 			return err
 		}
-		//fmt.Println(path)
 		directoryTree.InsertNode(path, d)
 		return nil
 	})
+	log.Println("Tree generated successfully.")
 	common.CheckErr(err)
-	directoryTree.PrintTree(directoryTree.GetRoot())
+
+	log.Println("Printing tree...")
+	directoryTree.TraverseTree(directoryTree.GetRoot())
+	log.Println("Tree printed successfully.")
 }
