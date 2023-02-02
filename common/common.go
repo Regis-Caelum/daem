@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"log"
+	"io/ioutil"
 	"net/http"
 	"os"
 	"strings"
@@ -77,8 +77,29 @@ func (t *Tree) TraverseTree(node *Node) {
 	if node == nil {
 		return
 	}
-	fmt.Println(node.Path)
-	CreateRefOnGitHub(node, t.GitHubRepo)
+	vv, err := node.Info.Info()
+	if err != nil {
+		return
+	}
+	if !vv.IsDir() {
+		//fmt.Println(node.Path)
+		paths := strings.Split(node.Path, "/")
+		var finPath = ""
+		var f = 0
+		for i, val := range paths {
+			if val == "dronebase" {
+				f = 1
+			}
+			if f == 1 {
+				finPath += val
+				if i != len(paths)-1 {
+					finPath += "/"
+				}
+			}
+		}
+		//fmt.Println(finPath)
+		CreateRefOnGitHub(finPath, node, t.GitHubRepo)
+	}
 	for _, val := range node.Children {
 		t.TraverseTree(val)
 	}
@@ -86,54 +107,40 @@ func (t *Tree) TraverseTree(node *Node) {
 
 func CheckErr(err error) {
 	if err != nil {
-		log.Printf("Error: %v", err.Error())
+		fmt.Printf("Error: %v", err.Error())
 	}
 }
 
-func CreateRefOnGitHub(node *Node, gitHubUrl string) {
-	// TODO: Implement function to create the reference on GitHub Repo
+func CreateRefOnGitHub(gitPath string, node *Node, gitHubUrl string) {
 	client := &http.Client{}
 	data, err := os.ReadFile(node.Path)
 	encodedText := base64.StdEncoding.EncodeToString(data)
 	val := struct {
-		Message   string `json:"message"`
-		Committer struct {
-			Name  string `json:"name"`
-			Email string `json:"email"`
-		} `json:"committer"`
+		Message string `json:"message"`
 		Content string `json:"content"`
 	}{
 		Message: "backup",
-		Committer: struct {
-			Name  string `json:"name"`
-			Email string `json:"email"`
-		}{
-			Name:  "sss",
-			Email: "sss",
-		},
 		Content: encodedText,
 	}
 	jsonData, err := json.Marshal(&val)
 	CheckErr(err)
-
-	request, _ := http.NewRequest(http.MethodPut, gitHubUrl+node.Path, bytes.NewReader(jsonData))
+	request, _ := http.NewRequest(http.MethodPut, gitHubUrl+gitPath, bytes.NewReader(jsonData))
 	nodeInfo, err := node.Info.Info()
-
 	if nodeInfo.IsDir() {
 		return
 	}
-	basicAuthToken := base64.StdEncoding.EncodeToString([]byte("khanmf@rknec.edu:" + os.Getenv("GITHUB_API_KEY")))
-	request.Header.Add("Accept", "application/vnd.github+json")
-	fmt.Println(basicAuthToken)
-	request.Header.Add("Authorization", "Bearer "+basicAuthToken)
-	request.Header.Add("X-GitHub-Api-Version", "2022-11-28")
-
+	request.Header.Set("Accept", "application/vnd.github+json")
+	request.Header.Set("Authorization", "Bearer "+os.Getenv("GITHUB_API_KEY"))
+	request.Header.Set("X-GitHub-Api-Version", "2022-11-28")
+	request.Header.Set("User-Agent", "go-package-http/dev")
 	response, err := client.Do(request)
 	CheckErr(err)
 
-	if response.StatusCode == 200 {
+	if response.StatusCode == 201 {
 		return
 	} else {
+		bytes, _ := ioutil.ReadAll(response.Body)
+		fmt.Printf("%v\n", string(bytes))
 		fmt.Println("Status Code: ", response.StatusCode)
 	}
 
