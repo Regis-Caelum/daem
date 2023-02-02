@@ -4,12 +4,13 @@ import (
 	"daem/common"
 	"io/fs"
 	"log"
+	"os"
 	"path/filepath"
 )
 
 func main() {
-	path := "/home/kenkaneki124/dronebase"
-	gitHubUrl := "https://api.github.com/repos/AbhayDhaundiyal/Hello-00World/contents/"
+	path := os.Getenv("root_path")
+	gitHubUrl := common.GitCreatePath + os.Getenv("Username") + common.BackSlash + os.Getenv("Repo_Name") + common.BackSlash + common.Contents
 	directoryTree := new(common.Tree)
 	directoryTree = directoryTree.InitializeTree(path, gitHubUrl)
 	log.Println("Generating tree...")

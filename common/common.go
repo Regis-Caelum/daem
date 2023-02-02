@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
 	"strings"
@@ -77,29 +77,7 @@ func (t *Tree) TraverseTree(node *Node) {
 	if node == nil {
 		return
 	}
-	vv, err := node.Info.Info()
-	if err != nil {
-		return
-	}
-	if !vv.IsDir() {
-		//fmt.Println(node.Path)
-		paths := strings.Split(node.Path, "/")
-		var finPath = ""
-		var f = 0
-		for i, val := range paths {
-			if val == "dronebase" {
-				f = 1
-			}
-			if f == 1 {
-				finPath += val
-				if i != len(paths)-1 {
-					finPath += "/"
-				}
-			}
-		}
-		//fmt.Println(finPath)
-		CreateRefOnGitHub(finPath, node, t.GitHubRepo)
-	}
+	CreateRefOnGitHub(node, t.GitHubRepo)
 	for _, val := range node.Children {
 		t.TraverseTree(val)
 	}
@@ -111,7 +89,8 @@ func CheckErr(err error) {
 	}
 }
 
-func CreateRefOnGitHub(gitPath string, node *Node, gitHubUrl string) {
+func CreateRefOnGitHub(node *Node, gitHubUrl string) {
+
 	client := &http.Client{}
 	data, err := os.ReadFile(node.Path)
 	encodedText := base64.StdEncoding.EncodeToString(data)
@@ -124,24 +103,23 @@ func CreateRefOnGitHub(gitPath string, node *Node, gitHubUrl string) {
 	}
 	jsonData, err := json.Marshal(&val)
 	CheckErr(err)
-	request, _ := http.NewRequest(http.MethodPut, gitHubUrl+gitPath, bytes.NewReader(jsonData))
 	nodeInfo, err := node.Info.Info()
+	CheckErr(err)
 	if nodeInfo.IsDir() {
 		return
 	}
+	request, err := http.NewRequest(http.MethodPut, gitHubUrl+node.Path, bytes.NewReader(jsonData))
+	CheckErr(err)
 	request.Header.Set("Accept", "application/vnd.github+json")
 	request.Header.Set("Authorization", "Bearer "+os.Getenv("GITHUB_API_KEY"))
 	request.Header.Set("X-GitHub-Api-Version", "2022-11-28")
 	request.Header.Set("User-Agent", "go-package-http/dev")
 	response, err := client.Do(request)
 	CheckErr(err)
-
 	if response.StatusCode == 201 {
 		return
 	} else {
-		bytes, _ := ioutil.ReadAll(response.Body)
-		fmt.Printf("%v\n", string(bytes))
-		fmt.Println("Status Code: ", response.StatusCode)
+		log.Println("Status Code: ", response.StatusCode)
 	}
 
 }
