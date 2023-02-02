@@ -91,7 +91,7 @@ func CheckErr(err error) {
 }
 
 func CreateRefOnGitHub(node *Node, gitHubUrl string) {
-	// TODO: Implement function to create the reference on GitHub Repo
+	// TODO: Implement function to upload the file if the node is a file node
 	client := &http.Client{}
 	data, err := os.ReadFile(node.Path)
 	encodedText := base64.StdEncoding.EncodeToString(data)
