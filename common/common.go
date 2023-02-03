@@ -77,7 +77,6 @@ func (t *Tree) TraverseTree(node *Node) {
 	if node == nil {
 		return
 	}
-	fmt.Println(node.Path)
 	CreateRefOnGitHub(node, t.GitHubRepo)
 	for _, val := range node.Children {
 		t.TraverseTree(val)
@@ -86,7 +85,7 @@ func (t *Tree) TraverseTree(node *Node) {
 
 func CheckErr(err error) {
 	if err != nil {
-		log.Printf("Error: %v", err.Error())
+		fmt.Printf("Error: %v", err.Error())
 	}
 }
 
@@ -96,45 +95,31 @@ func CreateRefOnGitHub(node *Node, gitHubUrl string) {
 	data, err := os.ReadFile(node.Path)
 	encodedText := base64.StdEncoding.EncodeToString(data)
 	val := struct {
-		Message   string `json:"message"`
-		Committer struct {
-			Name  string `json:"name"`
-			Email string `json:"email"`
-		} `json:"committer"`
+		Message string `json:"message"`
 		Content string `json:"content"`
 	}{
 		Message: "backup",
-		Committer: struct {
-			Name  string `json:"name"`
-			Email string `json:"email"`
-		}{
-			Name:  "sss",
-			Email: "sss",
-		},
 		Content: encodedText,
 	}
 	jsonData, err := json.Marshal(&val)
 	CheckErr(err)
-
-	request, _ := http.NewRequest(http.MethodPut, gitHubUrl+node.Path, bytes.NewReader(jsonData))
 	nodeInfo, err := node.Info.Info()
-
+	CheckErr(err)
 	if nodeInfo.IsDir() {
 		return
 	}
-	basicAuthToken := base64.StdEncoding.EncodeToString([]byte("khanmf@rknec.edu:" + os.Getenv("GITHUB_API_KEY")))
-	request.Header.Add("Accept", "application/vnd.github+json")
-	fmt.Println(basicAuthToken)
-	request.Header.Add("Authorization", "Bearer "+basicAuthToken)
-	request.Header.Add("X-GitHub-Api-Version", "2022-11-28")
-
+	request, err := http.NewRequest(http.MethodPut, gitHubUrl+node.Path, bytes.NewReader(jsonData))
+	CheckErr(err)
+	request.Header.Set("Accept", "application/vnd.github+json")
+	request.Header.Set("Authorization", "Bearer "+os.Getenv("GITHUB_API_KEY"))
+	request.Header.Set("X-GitHub-Api-Version", "2022-11-28")
+	request.Header.Set("User-Agent", "go-package-http/dev")
 	response, err := client.Do(request)
 	CheckErr(err)
-
-	if response.StatusCode == 200 {
+	if response.StatusCode == 201 {
 		return
 	} else {
-		fmt.Println("Status Code: ", response.StatusCode)
+		log.Println("Status Code: ", response.StatusCode)
 	}
 
 }
