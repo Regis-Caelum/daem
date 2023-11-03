@@ -1,0 +1,115 @@
+syntax = "proto3";
+
+option go_package = "awesomeProject/models";
+
+package models;
+
+// Define ENUM type for ProductCategory
+enum ProductCategory {
+  MOBILE = 0;
+  LAPTOP = 1;
+}
+
+// Define ENUM type for PaymentMode
+enum PaymentMode {
+  UPI = 0;
+  COD = 1;
+}
+
+// Define ENUM type for AuctionStatus
+enum AuctionStatus {
+  OPEN = 0;
+  CLOSED = 1;
+  COMPLETED = 2;
+  CANCELLED = 3;
+  POSTPONED = 4;
+  SCHEDULED = 5;
+}
+
+// Define ENUM type for OrderStatus
+enum OrderStatus {
+  PROCESSING = 0;
+  SHIPPED = 1;
+  DELIVERED = 2;
+}
+
+// Define ENUM type for PaymentStatus
+enum PaymentStatus {
+  PENDING = 0;
+  PAID = 1;
+}
+
+// Message representing a User
+message User {
+  string user_id = 1;
+  string password = 2;
+  string email = 3;
+  string first_name = 4;
+  string last_name = 5;
+  string address = 6;
+  string phone_number = 7;
+  int64 registration_date = 8;
+}
+
+// Message representing a Product
+message Product {
+  string product_id = 1;
+  string name = 2;
+  string description = 3;
+  string image_urls = 4;
+  float starting_price = 5;
+  ProductCategory category = 6;
+}
+
+// Message representing an Auction
+message Auction {
+  string auction_id = 1;
+  string product_id = 2;
+  int64 start_time = 3;
+  int64 end_time = 4;
+  float registration_fee = 5;
+  AuctionStatus status = 6;
+}
+
+// Message representing a Bid
+message Bid {
+  string bid_id = 1;
+  string auction_id = 2;
+  string user_id = 3;
+  float bid_amount = 4;
+  int64 bid_time = 5;
+}
+
+// Message representing a Cart
+message Cart {
+  string cart_id = 1;
+  string user_id = 2;
+  bool active = 3;
+}
+
+// Message representing a CartItem
+message CartItem {
+  string cart_item_id = 1;
+  string cart_id = 2;
+  string product_id = 3;
+  int64 quantity = 4;
+}
+
+// Message representing an Order
+message Order {
+  string order_id = 1;
+  string user_id = 2;
+  OrderStatus status = 3;
+  int64 order_date = 4;
+}
+
+// Message representing a Payment
+message Payment {
+  string payment_id = 1;
+  string user_id = 2;
+  string order_id = 3;
+  float amount = 4;
+  PaymentStatus status = 5;
+  int64 payment_date = 6;
+  PaymentMode mode = 7;
+}
