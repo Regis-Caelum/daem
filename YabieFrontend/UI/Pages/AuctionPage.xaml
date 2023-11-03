@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YabieFrontend.UI.Pages.AuctionPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Auction" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,20,0,0" />
+            <!-- Auction Details Card -->
+            <Frame Margin="0,30,0,10" HeightRequest="200" WidthRequest="200" CornerRadius="150" Padding="20"
+                   HasShadow="True">
+                <Frame.Shadow>
+                    <Shadow Brush="Black"
+                            Offset="20,20"
+                            Radius="40"
+                            Opacity="50" />
+                </Frame.Shadow>
+                <!-- <StackLayout Margin="10"> -->
+                <!--     <Label Text="Highest Bid" FontSize="18" HorizontalOptions="Center"/> -->
+                <StackLayout VerticalOptions="Center">
+                    <Label Text="₹0" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" />
+                    <Label Text="Highest Bidder" HorizontalOptions="Center" />
+                    <Label Text="N/A" FontSize="16" HorizontalOptions="Center" />
+                </StackLayout>
+                <!-- </StackLayout> -->
+            </Frame>
+
+            <!-- List of All Bids -->
+            <Label Text="All Bids" FontSize="18" HorizontalOptions="Center" Margin="10" />
+            <CollectionView MinimumHeightRequest="100">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <!-- <TextCell Text="{Binding BidAmount, StringFormat='Bid: ${0:N2}'}" /> -->
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- List of Current User's Bids -->
+            <Label Text="Your Bids" FontSize="18" HorizontalOptions="CenterAndExpand" MinimumHeightRequest="100"
+                   Margin="10" />
+            <CollectionView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <!-- <TextCell Text="{Binding BidAmount, StringFormat='Bid: ${0:N2}'}" /> -->
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Grid Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*" />
+                    <ColumnDefinition Width="20*" />
+                </Grid.ColumnDefinitions>
+                <Entry Placeholder="Enter Your Bid" Grid.Column="0" />
+                <Button Text="Bid" FontSize="16" CornerRadius="10" Grid.Column="1" Scale="0.8" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

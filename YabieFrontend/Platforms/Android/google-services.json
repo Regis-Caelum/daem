@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "169290511221",
+    "project_id": "awesomeproject-c835b",
+    "storage_bucket": "awesomeproject-c835b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169290511221:android:7f78f4063680a6ce46193c",
+        "android_client_info": {
+          "package_name": "com.companyname.yabiefrontend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOHIfY7fGD3Myr0B_KshzC2OvnJTymLEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169290511221:android:1506cb2c4ffc928e46193c",
+        "android_client_info": {
+          "package_name": "com.example.awesomeproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOHIfY7fGD3Myr0B_KshzC2OvnJTymLEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

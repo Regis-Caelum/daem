@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YabieFrontend</name>
+    </assembly>
+    <members>
+        <member name="M:YabieFrontend.IServices.IAlertService.ShowConfirmation(System.String,System.String,System.Action{System.Boolean},System.String,System.String)">
+            <param name="callback">Action to perform afterwards.</param>
+        </member>
+        <member name="M:YabieFrontend.Services.AlertService.ShowAlert(System.String,System.String,System.String)">
+            <summary>
+            "Fire and forget". Method returns BEFORE showing alert.
+            </summary>
+        </member>
+        <member name="M:YabieFrontend.Services.AlertService.ShowConfirmation(System.String,System.String,System.Action{System.Boolean},System.String,System.String)">
+            <summary>
+            "Fire and forget". Method returns BEFORE showing alert.
+            </summary>
+            <param name="callback">Action to perform afterwards.</param>
+        </member>
+        <member name="T:YabieFrontend.ViewModels.AuctionListViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.AuctionListViewModel.Auctions">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.AuctionListViewModel._auctions"/>
+        </member>
+        <member name="F:YabieFrontend.ViewModels.AuctionListViewModel.loadBiddingPageCommand">
+            <summary>The backing field for <see cref="P:YabieFrontend.ViewModels.AuctionListViewModel.LoadBiddingPageCommand"/>.</summary>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.AuctionListViewModel.LoadBiddingPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:YabieFrontend.ViewModels.AuctionListViewModel.LoadBiddingPage(YabieFrontend.Models.Auction)"/>.</summary>
+        </member>
+        <member name="T:YabieFrontend.ViewModels.ItemListViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.ItemListViewModel.Items">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.ItemListViewModel._items"/>
+        </member>
+        <member name="F:YabieFrontend.ViewModels.ItemListViewModel.loadItemPageCommand">
+            <summary>The backing field for <see cref="P:YabieFrontend.ViewModels.ItemListViewModel.LoadItemPageCommand"/>.</summary>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.ItemListViewModel.LoadItemPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:YabieFrontend.ViewModels.ItemListViewModel.LoadItemPage(YabieFrontend.Models.Product)"/>.</summary>
+        </member>
+        <member name="T:YabieFrontend.ViewModels.ItemViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.ItemViewModel.Product">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.ItemViewModel._product"/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.ItemViewModel.FormattedDescription">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.ItemViewModel._formattedDescription"/>
+        </member>
+        <member name="F:YabieFrontend.ViewModels.ItemViewModel.loadAuctionDisclaimerPageCommand">
+            <summary>The backing field for <see cref="P:YabieFrontend.ViewModels.ItemViewModel.LoadAuctionDisclaimerPageCommand"/>.</summary>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.ItemViewModel.LoadAuctionDisclaimerPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:YabieFrontend.ViewModels.ItemViewModel.LoadAuctionDisclaimerPage"/>.</summary>
+        </member>
+        <member name="T:YabieFrontend.ViewModels.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.LoginViewModel.PhoneNumber">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.LoginViewModel._phoneNumber"/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.LoginViewModel.Password">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.LoginViewModel._password"/>
+        </member>
+        <member name="F:YabieFrontend.ViewModels.LoginViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:YabieFrontend.ViewModels.LoginViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.LoginViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:YabieFrontend.ViewModels.LoginViewModel.Login"/>.</summary>
+        </member>
+        <member name="T:YabieFrontend.ViewModels.SentOtpViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.SentOtpViewModel.PhoneNumber">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.SentOtpViewModel._phoneNumber"/>
+        </member>
+        <member name="F:YabieFrontend.ViewModels.SentOtpViewModel.sendOtpCommand">
+            <summary>The backing field for <see cref="P:YabieFrontend.ViewModels.SentOtpViewModel.SendOtpCommand"/>.</summary>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.SentOtpViewModel.SendOtpCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:YabieFrontend.ViewModels.SentOtpViewModel.SendOtp"/>.</summary>
+        </member>
+        <member name="T:YabieFrontend.ViewModels.VerifyOtpViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.VerifyOtpViewModel.PhoneNumber">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.VerifyOtpViewModel._phoneNumber"/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.VerifyOtpViewModel.Otp1">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.VerifyOtpViewModel._otp1"/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.VerifyOtpViewModel.Otp2">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.VerifyOtpViewModel._otp2"/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.VerifyOtpViewModel.Otp3">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.VerifyOtpViewModel._otp3"/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.VerifyOtpViewModel.Otp4">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.VerifyOtpViewModel._otp4"/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.VerifyOtpViewModel.Otp5">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.VerifyOtpViewModel._otp5"/>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.VerifyOtpViewModel.Otp6">
+            <inheritdoc cref="F:YabieFrontend.ViewModels.VerifyOtpViewModel._otp6"/>
+        </member>
+        <member name="F:YabieFrontend.ViewModels.VerifyOtpViewModel.verityOtpCommand">
+            <summary>The backing field for <see cref="P:YabieFrontend.ViewModels.VerifyOtpViewModel.VerityOtpCommand"/>.</summary>
+        </member>
+        <member name="P:YabieFrontend.ViewModels.VerifyOtpViewModel.VerityOtpCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:YabieFrontend.ViewModels.VerifyOtpViewModel.VerityOtp"/>.</summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Auctions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Auctions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Items">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Items" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Product">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Product" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FormattedDescription">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FormattedDescription" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PhoneNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PhoneNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Otp1">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Otp1" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Otp2">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Otp2" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Otp3">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Otp3" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Otp4">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Otp4" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Otp5">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Otp5" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Otp6">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Otp6" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Auctions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Auctions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Items">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Items" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Product">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Product" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FormattedDescription">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FormattedDescription" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PhoneNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PhoneNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Otp1">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Otp1" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Otp2">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Otp2" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Otp3">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Otp3" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Otp4">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Otp4" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Otp5">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Otp5" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Otp6">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Otp6" generated properties.</summary>
+        </member>
+    </members>
+</doc>

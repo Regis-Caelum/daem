@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:YabieFrontend.ViewModels"
+             x:Class="YabieFrontend.UI.Pages.SendOtpPage"
+             x:DataType="viewmodels:SentOtpViewModel">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="20">
+            <Label Text="Enter phone number" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20" />
+            <!-- PhoneNumber Entry -->
+            <Entry MaxLength="10" Text="{Binding PhoneNumber}" Placeholder="Phone Number"
+                   Margin="0,0,0,10" Keyboard="Numeric"/>
+            <Button Text="Send OTP" HorizontalOptions="Fill" Command="{Binding SendOtpCommand}"/>
+
+
+            <!-- Password Entry -->
+            <!-- <Entry Text="{Binding Password}" x:DataType="viewmodel:LoginViewModel" Placeholder="Password" -->
+            <!--        x:Name="PasswordEntry" IsPassword="True" Margin="0,0,0,20" /> -->
+            <!-- <Grid> -->
+            <!--     <Grid.RowDefinitions> -->
+            <!--         <RowDefinition Height="Auto" /> -->
+            <!--         <RowDefinition Height="Auto" /> -->
+            <!--     </Grid.RowDefinitions> -->
+            <!--     <Grid.ColumnDefinitions> -->
+            <!--         <ColumnDefinition Width="10*"/> -->
+            <!--         <ColumnDefinition Width="80*"/> -->
+            <!--         <ColumnDefinition Width="10*"/> -->
+            <!--     </Grid.ColumnDefinitions> -->
+            <!-- -->
+            <!--     <Label Grid.Column="1" Text="Enter phone number" FontSize="24" Grid.Row="0" HorizontalOptions="Center" Margin="0,0,0,20" /> -->
+            <!-- -->
+            <!--     <VerticalStackLayout Grid.Column="1" Grid.Row="1" HorizontalOptions="CenterAndExpand"> -->
+            <!--         <Entry Placeholder="Phone Number" Margin="0,0,0,20" WidthRequest="250"> -->
+            <!--             <Entry.Keyboard> -->
+            <!--                 <Keyboard x:FactoryMethod="get_Numeric" /> -->
+            <!--             </Entry.Keyboard> -->
+            <!--         </Entry> -->
+            <!-- -->
+            <!--         <Button Text="Send OTP" HorizontalOptions="Center" WidthRequest="250" /> -->
+            <!--     </VerticalStackLayout> -->
+            <!-- </Grid> -->
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

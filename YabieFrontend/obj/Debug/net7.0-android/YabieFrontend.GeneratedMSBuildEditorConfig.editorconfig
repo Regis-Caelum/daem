@@ -1,0 +1,129 @@
+is_global = true
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = YabieFrontend
+build_property.ProjectDir = /Users/inshalkhan/RiderProjects/YabieFrontend/
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Pages/DashboardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Pages.DashboardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = UI/Pages/DashboardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.RelativePath = UI/Pages/DashboardPage.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Pages/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Pages.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = UI/Pages/LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.RelativePath = UI/Pages/LoginPage.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Pages/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Pages.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = UI/Pages/MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.RelativePath = UI/Pages/MainPage.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Pages/AuctionGuidelinesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Pages.AuctionGuidelinesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UI/Pages/AuctionGuidelinesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UI/Pages/AuctionGuidelinesPage.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Pages/AuctionListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Pages.AuctionListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UI/Pages/AuctionListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UI/Pages/AuctionListPage.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Pages/AuctionPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Pages.AuctionPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UI/Pages/AuctionPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UI/Pages/AuctionPage.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Pages/CreateUserPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Pages.CreateUserPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UI/Pages/CreateUserPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UI/Pages/CreateUserPage.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Pages/ItemPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Pages.ItemPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UI/Pages/ItemPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UI/Pages/ItemPage.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Pages/PaymentPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Pages.PaymentPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UI/Pages/PaymentPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UI/Pages/PaymentPage.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Pages/SendOtpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Pages.SendOtpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UI/Pages/SendOtpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UI/Pages/SendOtpPage.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Pages/VerifyOtpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Pages.VerifyOtpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UI/Pages/VerifyOtpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UI/Pages/VerifyOtpPage.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Views/ItemListView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Views.ItemListView.xaml
+build_metadata.AdditionalFiles.TargetPath = UI/Views/ItemListView.xaml
+build_metadata.AdditionalFiles.RelativePath = UI/Views/ItemListView.xaml
+
+[/Users/inshalkhan/RiderProjects/YabieFrontend/UI/Views/TitlebarView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YabieFrontend.UI.Views.TitlebarView.xaml
+build_metadata.AdditionalFiles.TargetPath = UI/Views/TitlebarView.xaml
+build_metadata.AdditionalFiles.RelativePath = UI/Views/TitlebarView.xaml

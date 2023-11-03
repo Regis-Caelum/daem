@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YabieFrontend.UI.Pages.AuctionGuidelinesPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Auction Participation Guidelines" FontSize="24" FontAttributes="Bold"
+                       HorizontalOptions="Center" Margin="10,20,10,0" />
+                <!-- Page Title -->
+
+                <!-- Formatted Text Section -->
+                <!-- <Label Text="Auction Details:" FontSize="18" FontAttributes="Bold" Margin="10,10,10,0" /> -->
+
+                <StackLayout Margin="10,10,10,0">
+                    <Label Text="1. Registration:" FontAttributes="Bold" Margin="0,0,0,5" />
+                    <Label Margin="10,0,0,5"
+                           Text="• User Registration: To participate in auctions, you must be a registered user. Please complete the registration process if you haven't already." />
+                    <Label Margin="10,0,0,10"
+                           Text="• Account Information: Ensure that your account information, including your contact details and payment method, is accurate and up-to-date." />
+
+                    <Label Text="2. Auction Details:" FontAttributes="Bold" Margin="0,0,0,5" />
+                    <Label Margin="10,0,0,5"
+                           Text="• Read Auction Details: Before participating in an auction, carefully read the auction details, including the product description, starting price, auction start and end times, and any specific terms and conditions." />
+                    <Label Margin="10,0,0,5"
+                           Text="• Participation Fee: Some auctions may require a participation fee. Make sure you understand the fee structure and payment process." />
+
+                    <Label Text="3. Bidding:" FontAttributes="Bold" Margin="0,0,0,5" />
+                    <Label Margin="10,0,0,5"
+                           Text="• Bidding Rules: Understand the bidding rules for each auction. Bids may have different formats, such as ascending bids, fixed bids, or bid increments. Review the auction rules before placing your bids." />
+                    <Label Margin="10,0,0,5"
+                           Text="• Bid Responsibly: Only place bids if you are genuinely interested in purchasing the product. Bidding frivolously may result in consequences, including account suspension." />
+                    <Label Margin="10,0,0,5"
+                           Text="• Bidding Limits: Set your bidding limits in advance to avoid overextending your budget. Don't bid more than you can afford." />
+                    <Label Margin="10,0,0,5"
+                           Text="• Bid Confirmation: Ensure that you confirm your bid before the auction timer expires. Once a bid is placed, it cannot be retracted." />
+
+                    <Label Text="4. Winning Auctions:" FontAttributes="Bold" Margin="0,0,0,5" />
+                    <Label Margin="10,0,0,5"
+                           Text="• Winning Bidder: The highest bidder when the auction timer expires wins the product. If you are the winning bidder, you are obligated to complete the purchase." />
+                    <Label Margin="10,0,0,5"
+                           Text="• Payment: You will be required to make the payment for the product immediately upon winning the auction. Payment instructions will be provided." />
+
+                    <Label Text="5. Account Safety:" FontAttributes="Bold" Margin="0,0,0,5" />
+                    <Label Margin="10,0,0,10"
+                           Text="• Protect Your Account: Keep your login credentials secure. Do not share your account details with anyone." />
+                    <Label Margin="10,0,0,10"
+                           Text="• Two-Factor Authentication: Enable two-factor authentication for added security." />
+
+                    <Label Text="6. Dispute Resolution:" FontAttributes="Bold" Margin="0,0,0,5" />
+                    <Label Margin="10,0,0,10"
+                           Text="• Dispute Process: In case of any issues or disputes, our platform provides a dispute resolution process. Contact our support team for assistance." />
+
+                    <Label Text="7. Abide by Rules:" FontAttributes="Bold" Margin="0,0,0,5" />
+                    <Label Margin="10,0,0,10"
+                           Text="• Code of Conduct: Follow our platform's code of conduct and rules at all times. Be respectful of other users and maintain a positive community environment." />
+
+                    <Label Text="8. Support:" FontAttributes="Bold" Margin="0,0,0,5" />
+                    <Label Margin="10,0,0,5"
+                           Text="• Contact Support: If you have any questions, concerns, or encounter technical issues, feel free to contact our customer support team. We are here to assist you." />
+
+                </StackLayout>
+                <Grid Margin="10,10,0,0">
+                       <Grid.ColumnDefinitions>
+                              <ColumnDefinition Width="Auto" />
+                              <ColumnDefinition Width="*" />
+                       </Grid.ColumnDefinitions>
+                       <Grid.RowDefinitions>
+                              <RowDefinition Height="Auto" />
+                       </Grid.RowDefinitions>
+
+                       <Label Grid.Column="0" Text="Note: " FontAttributes="Bold" />
+                       <Label Grid.Column="1" Text="Auctions will only start when a pool of bidders is complete. The pool size can vary from auction to auction. Once the pool size is reached, we'll provide a standard 2-3 day buffer before starting the auction at a scheduled time." />
+                </Grid>
+                
+                <Button Text="Proceed" FontSize="20" Margin="10" IsEnabled="true" Pressed="Button_OnPressed"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

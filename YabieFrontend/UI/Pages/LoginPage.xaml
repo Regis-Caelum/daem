@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YabieFrontend.UI.Pages.LoginPage"
+             xmlns:viewmodel="clr-namespace:YabieFrontend.ViewModels"
+             x:DataType="viewmodel:LoginViewModel">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="20">
+            <!-- Title Label -->
+            <Label Text="Login" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20" />
+
+            <!-- PhoneNumber Entry -->
+            <Entry MaxLength="10" Text="{Binding PhoneNumber}" Placeholder="Phone Number" x:Name="PhoneNumberEntry"
+                   Margin="0,0,0,10" Keyboard="Numeric"/>
+
+            <!-- Password Entry -->
+            <Entry Text="{Binding Password}" x:DataType="viewmodel:LoginViewModel" Placeholder="Password"
+                   x:Name="PasswordEntry" IsPassword="True" Margin="0,0,0,20" />
+
+            <!-- Login Button -->
+            <Button Text="Login" Command="{Binding LoginCommand}" HorizontalOptions="FillAndExpand" />
+
+            <!-- Sign Up Label with Tap Gesture -->
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Don't have an account? " Margin="0,20,0,0"/>
+                <Label Text="Sign Up" TextColor="Blue" Margin="0,20,0,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="TapGestureRecognizer_OnTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

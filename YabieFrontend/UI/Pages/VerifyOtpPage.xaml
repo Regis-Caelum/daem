@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:YabieFrontend.ViewModels"
+             x:Class="YabieFrontend.UI.Pages.VerifyOtpPage"
+             x:DataType="viewmodels:VerifyOtpViewModel">
+    <ContentPage.Content>
+        <Grid VerticalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Display OTP Entry Boxes -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="1">
+                <Entry x:Name="Entry1" TextChanged="InputView_OnTextChanged" Text="{Binding Otp1}" Placeholder="1" WidthRequest="40" MaxLength="1" Keyboard="Numeric" />
+                <Entry x:Name="Entry2" TextChanged="InputView_OnTextChanged" Text="{Binding Otp2}" Placeholder="2" WidthRequest="40" MaxLength="1" Keyboard="Numeric" />
+                <Entry x:Name="Entry3" TextChanged="InputView_OnTextChanged" Text="{Binding Otp3}" Placeholder="3" WidthRequest="40" MaxLength="1" Keyboard="Numeric" />
+                <Entry x:Name="Entry4" TextChanged="InputView_OnTextChanged" Text="{Binding Otp4}" Placeholder="4" WidthRequest="40" MaxLength="1" Keyboard="Numeric" />
+                <Entry x:Name="Entry5" TextChanged="InputView_OnTextChanged" Text="{Binding Otp5}" Placeholder="5" WidthRequest="40" MaxLength="1" Keyboard="Numeric" />
+                <Entry x:Name="Entry6" TextChanged="InputView_OnTextChanged" Text="{Binding Otp6}" Placeholder="6" WidthRequest="40" MaxLength="1" Keyboard="Numeric" />
+            </StackLayout>
+
+            <!-- Submit Button -->
+            <Button Text="Submit" Grid.Row="2" HorizontalOptions="Center" />
+        </Grid>
+    </ContentPage.Content>
+
+
+</ContentPage>
